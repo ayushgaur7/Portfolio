@@ -22,7 +22,7 @@ const Hero = () => {
           fontFamily: 'Inter, sans-serif',
           fontWeight: 400
         }}>
-          Hello Am<br/>Ayush Gaur
+          Full Stack Developer
         </p>
         <h1 style={{ 
           fontSize: 'clamp(3.5rem, 8vw, 6rem)', 
@@ -33,7 +33,7 @@ const Hero = () => {
           margin: '0.5rem 0 3.5rem 0',
           letterSpacing: '-1px'
         }}>
-          Full Stack<br/>Developer
+          Ayush Gaur
         </h1>
         
         {/* Circular Play Button */}
@@ -82,7 +82,7 @@ const Hero = () => {
         animationFillMode: 'forwards'
       }}>
         <img 
-          src="/profile.jpg" 
+          src="/profile.png" 
           alt="Ayush Gaur" 
           style={{
             width: '400px',
