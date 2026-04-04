@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Play, Github, Linkedin, Mail, Twitter, Download } from 'lucide-react';
 
 const Hero = () => {
   return (
@@ -36,34 +36,68 @@ const Hero = () => {
           Ayush Gaur
         </h1>
         
-        {/* Circular Play Button */}
-        <div style={{
-          width: '80px',
-          height: '80px',
-          borderRadius: '50%',
-          border: '2px solid rgba(251, 192, 45, 0.3)',
-          backgroundColor: 'rgba(251, 192, 45, 0.1)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          cursor: 'pointer',
-          transition: 'transform 0.3s ease',
-        }}
-        onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-        onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-        >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+          {/* Circular Play Button */}
           <div style={{
-            width: '56px',
-            height: '56px',
+            width: '80px',
+            height: '80px',
             borderRadius: '50%',
-            backgroundColor: '#ffffff',
+            border: '2px solid rgba(251, 192, 45, 0.3)',
+            backgroundColor: 'rgba(251, 192, 45, 0.1)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            boxShadow: '0 4px 10px rgba(0,0,0,0.1)'
-          }}>
-            <Play size={22} color="var(--primary-color)" style={{ marginLeft: '4px' }} fill="var(--primary-color)" />
+            cursor: 'pointer',
+            transition: 'transform 0.3s ease',
+          }}
+          onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+          onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+          >
+            <div style={{
+              width: '56px',
+              height: '56px',
+              borderRadius: '50%',
+              backgroundColor: '#ffffff',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              boxShadow: '0 4px 10px rgba(0,0,0,0.1)'
+            }}>
+              <Play size={22} color="var(--primary-color)" style={{ marginLeft: '4px' }} fill="var(--primary-color)" />
+            </div>
           </div>
+
+          {/* Resume Button */}
+          <a 
+            href="/Ayush%20Gaur%20Cv.pdf" 
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '0.75rem',
+              padding: '1rem 2rem',
+              backgroundColor: 'transparent',
+              border: '2px solid var(--primary-color, #fbc02d)',
+              color: '#fff',
+              borderRadius: '50px',
+              textDecoration: 'none',
+              fontWeight: 500,
+              fontSize: '1.1rem',
+              transition: 'all 0.3s ease',
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.backgroundColor = 'var(--primary-color, #fbc02d)';
+              e.currentTarget.style.color = '#1a1a1a';
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.backgroundColor = 'transparent';
+              e.currentTarget.style.color = '#fff';
+            }}
+          >
+            <Download size={20} />
+            <span>View Resume</span>
+          </a>
         </div>
       </div>
 
